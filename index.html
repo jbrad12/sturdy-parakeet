@@ -22,8 +22,8 @@
                 <!-- <div class="form-control"> -->
                   <label>Search for a City:</label>
                   <div id="city-input">
-                    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter City">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <input type="text" class="form-control" id="user-input"  placeholder="Enter City">
+                    <button type="submit" class="btn btn-primary" id="btn1">Submit</button>
                   </div>
                 <!-- </div> -->
             </form>
@@ -40,23 +40,24 @@
           </div>
           <div class="col-8" id="data-main">
             <div id="data-top">
-                <h2 id="city">City: </h2>
-                <h4 id="temp">Temperature: </h4>
-                <h4 id="hum">Humidity: </h4>
-                <h4 id="wind">Wind Speed:</h4>
-                <h4 id="uv">UV Index:</h4>
+                <h2 id="city"></h2>
+                <img id="icon">
+                <h4 id="temp"></h4>
+                <h4 id="hum"></h4>
+                <h4 id="wind"></h4>
+                <h4 id="uv"></h4>
             </div>
             <h3 id="forecast">5-Day Forecast</h3>
             <div class="card" id="card1" style="width: 12rem;">
                 <div class="card-body">
-                  <h5 class="card-title">Date: </h5>
+                  <h5 class="card-title" id="date1">Date: </h5>
                   <h6 class="card-subtitle mb-2 ">Temperature: </h6>
                   <h6 class="card-subtitle mb-2 ">Humidity: </h6>
                 </div>
             </div>
             <div class="card" id="card2" style="width: 12rem;">
                 <div class="card-body">
-                  <h5 class="card-title">Date: </h5>
+                  <h5 class="card-title" id="date2">Date: </h5>
                   <h6 class="card-subtitle mb-2 ">Temperature: </h6>
                   <h6 class="card-subtitle mb-2 ">Humidity: </h6>
                 </div>
@@ -88,6 +89,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

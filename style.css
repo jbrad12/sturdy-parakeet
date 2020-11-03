@@ -76,3 +76,21 @@ li:hover {
     color: white;
     cursor: pointer;
 }
+
+h2 {
+    margin: 40px;
+    font-weight: bold;
+    display: inline;
+    vertical-align: middle;
+    margin-top: 30px;
+}
+
+h4 {
+    margin: 40px
+}
+
+#icon {
+    vertical-align: middle;
+    margin-top: 10px;
+  
+}

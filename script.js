@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 
-$("#date1").text(moment().format("(M/D/YYYY)"))
 
 //Local Storage
 local()
@@ -36,18 +35,22 @@ $.ajax({
 
     console.log(response)
 
+    for (var i = 0; i < 6; i++) {
+
     $("#city").text(response.city.name + "  " + moment().format("(M/D/YYYY)"))
 
-    var kel = response.list[0].main.temp
+    var kel = response.list[i].main.temp
     var far = (kel - 273.15) * 1.8 + 32
-    $("#temp").text("Temperature: " + far.toFixed() + " degrees")
-    $("#hum").text("Humidity: " + response.list[0].main.humidity + "%")
+    $("#temp" + [i]).text("Temperature: " + far.toFixed() + "°")
+    $("#hum" + [i]).text("Humidity: " + response.list[i].main.humidity + "%")
     $("#wind").text("Wind Speed: " + response.list[0].wind.speed)
 
 
-    var iconcode = response.list[0].weather[0].icon;
+    var iconcode = response.list[i].weather[0].icon;
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-    $("#icon").attr("src", iconurl);
+    $("#icon" + [i]).attr("src", iconurl);
+
+    }
 
 //Second AJAX call
 var lat = response.city.coord.lat;

@@ -44,6 +44,9 @@ $.ajax({
     $("#temp" + [i]).text("Temperature: " + far.toFixed() + "°")
     $("#hum" + [i]).text("Humidity: " + response.list[i].main.humidity + "%")
     $("#wind").text("Wind Speed: " + response.list[0].wind.speed)
+    var dateFormated = response.list[i].dt_txt
+    $("#date" + [i]).text(dateFormated.substr(0, dateFormated.indexOf(" "))
+    )
 
 
     var iconcode = response.list[i].weather[0].icon;
